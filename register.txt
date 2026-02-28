@@ -1,0 +1,25 @@
+<?php
+include 'connect.php';
+
+if(isset($_POST['register'])){
+    $email = $_POST['email'];
+    $username = $_POST['username'];
+    $password = md5($_POST['password']); // Hash the password
+
+    // Check if email already exists
+    $checkemail = "SELECT * FROM users WHERE email='$email'";
+    $result = mysqli_query($conn, $checkemail);
+
+    if(mysqli_num_rows($result) > 0){
+        echo "Email already exists";
+    } else {
+        $insertQuery = "INSERT INTO users (email, username, password) VALUES ('$email', '$username', '$password')";
+        if($conn->query($insertQuery) === TRUE){
+            header("Location: index.php");
+            exit();
+        } else {
+            echo "Error: " . $insertQuery . "<br>" . $conn->error;
+        }
+    }
+}
+?>

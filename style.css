@@ -1,0 +1,489 @@
+/* Main Banner */
+.hero-banner {
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+}
+.banner-slider {
+    display: flex;
+    width: calc(3 * 100%);
+    height: 100%;
+    animation: slideBanner 9s linear infinite;
+}
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-width: 100%;
+    border-radius: 4px;
+}
+@keyframes slideBanner {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(0); }
+    38% { transform: translateX(-100%); }
+    66% { transform: translateX(-100%); }
+    71% { transform: translateX(-200%); }
+    100% { transform: translateX(-200%); }
+}
+/* Cart and Profile Button Styles */
+.cart-btn {
+    background-color: var(--primary-orange);
+    color: var(--white);
+    border: none;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background 0.2s;
+}
+.cart-btn:hover {
+    background-color: #ffae42;
+}
+.profile-btn {
+    background-color: var(--secondary-blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.profile-btn:hover {
+    background-color: var(--primary-blue);
+}
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* --- COLORS (MODIFIED FOR AMAZON THEME) --- */
+        :root {
+            --primary-blue: #131921; /* Amazon Dark Blue */
+            --secondary-blue: #232f3e; /* Amazon Menu Blue */
+            --primary-orange: #ff9900; /* Amazon Orange Accent */
+            --white: #ffffff;
+            --grey-border: #eff0f5;
+        }
+
+        /* --- LAYOUT UTILITIES --- */
+        .container {
+            max-width: 1188px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* --- TOP BAR (Small links) --- */
+        .top-bar {
+            background-color: var(--secondary-blue); /* Darker blue */
+            border-bottom: 1px solid #1f2732;
+            font-size: 12px;
+            padding: 5px 0;
+        }
+        
+        .top-bar .container {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        .top-bar a {
+            color: #ffffff; /* White text on dark bar */
+            font-weight: 400;
+        }
+        
+        .top-bar a:hover { color: var(--primary-orange); }
+
+        /* --- MAIN HEADER (Amazon Dark Blue) --- */
+        .main-header {
+            background-color: var(--primary-blue);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--white); /* White logo */
+            margin-right: 40px;
+        }
+        
+        .logo span { color: var(--primary-orange); }
+
+        /* Search Bar */
+        .search-box {
+            flex: 1;
+            display: flex;
+            margin-right: 40px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: var(--white); /* White search input */
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-box button {
+            background-color: var(--primary-orange); /* Amazon Orange button */
+            color: var(--primary-blue); /* Dark text on orange */
+            border: none;
+            padding: 0 25px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        /* Cart Icon - change color to white/yellow for dark background */
+        .cart-icon img { 
+            width: 25px; 
+            filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(24deg) brightness(100%) contrast(100%); 
+        } 
+
+        /* --- HERO SECTION (Sidebar + Banner) --- */
+        .hero-section {
+            margin-top: 15px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 15px;
+            height: 344px;
+        }
+
+        /* Sidebar Categories */
+        .categories-sidebar {
+            background: var(--white);
+            border-radius: 4px;
+            padding: 10px 0;
+            font-size: 14px;
+            color: #555;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .categories-sidebar li {
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .categories-sidebar li:hover {
+            background-color: #f5f5f5; /* Subtle grey hover */
+            color: var(--primary-orange);
+        }
+
+        /* Main Banner */
+        .hero-banner {
+            background-image: url('MERO.PNG'); /* New theme banner */ 
+            background-size: cover;
+            background-position: center;
+            border-radius: 4px;
+        }
+
+        /* --- FLASH SALE SECTION --- */
+        .flash-sale { margin-top: 20px; }
+
+        .section-title {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .products-container {
+            background: var(--white);
+            padding: 10px;
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+        }
+
+        /* Product Card */
+        .product-card {
+            min-width: 180px;
+            background: var(--white);
+            transition: 0.3s;
+            padding: 10px;
+            border: 1px solid transparent;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background: #eee;
+            margin-bottom: 8px;
+        }
+
+        .product-title {
+            font-size: 14px;
+            line-height: 18px;
+            height: 36px;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            color: #273965; 
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .product-old-price {
+            font-size: 12px;
+            color: #9e9e9e;
+            text-decoration: line-through;
+        }
+
+        
+        .just-for-you {
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .products-grid .product-card {
+            background: var(--white);
+            border-radius: 4px;
+        }
+        
+        .load-more {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .btn-outline {
+            padding: 10px 40px;
+            border: 1px solid var(--primary-orange);
+            color: var(--primary-orange);
+            background: transparent;
+            font-weight: 500;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        /* --- FOOTER (Amazon Dark Blue) --- */
+        footer {
+            background-color: var(--secondary-blue); /* Darker blue for footer */
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+        /* Add these styles for the new buttons */
+.buyer-btn, .seller-btn {
+    padding: 10px 20px;
+    background: #ff9900;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+}
+
+.buyer-btn {
+    background: #ff9900;
+}
+
+.buyer-btn:hover {
+    background: #ffae42;
+}
+
+.seller-btn {
+    background: #232f3e;
+}
+
+.seller-btn:hover {
+    background: #37475a;
+}
+        .footer-cols {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .buyer{
+          color: #ffffff;
+          padding: 15px;
+          border-radius: 20px;
+          background-color: transparent;
+          border-color: white;
+          
+        }
+        .buyer:hover{
+          background-color: #4a90e2;
+          border-color: #4a90e2;
+        transform: scale(1.06);
+        transition: transform 0.4s;
+        }
+        
+        .seller{
+          padding: 10px;
+          border-radius: 20px;
+          background-color: #d5b28f;
+        }
+        .footer-cols h3 { margin-bottom: 15px; font-size: 16px; color: var(--primary-orange); }
+        .footer-cols ul li { margin-bottom: 8px; font-size: 12px; color: #f1f1f1; }
+        nav {
+    background: #111;
+    padding: 15px;
+}
+
+nav button {
+    padding: 8px 16px;
+    border: none;
+    background: #4a90e2;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+}.overlay {
+    position: fixed;
+    inset: 0;
+   background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);  
+    display: none; /* <--- This hides the Login Modal by default */
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    z-index: 1000; /* Added z-index to ensure it sits on top */
+}
+.over {
+    position: fixed;
+    inset: 0;
+   background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);  
+    display: none; /* <--- This hides the Register Modal by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Added z-index to ensure it sits on top */
+}
+
+/* Also, make sure the text color for the links is correct inside the login/register boxes */
+.login-box p, .register p {
+    color: #fff; /* Make all non-link text white */
+}
+
+.login-box {
+    width: 320px;
+    padding: 30px;
+   background-color: rgba(255, 255, 255, 0.01);
+
+    border-radius: 15px;
+    backdrop-filter: blur(20px); 
+  justify-content: center;
+    align-items: center;
+    
+    border: 1px solid rgba(255,255,255,0.3);
+}
+.register {
+    width: 350px;
+    padding: 30px;
+   background-color: rgba(255, 255, 255, 0.01);
+
+    border-radius: 15px;
+    backdrop-filter: blur(20px); 
+ 
+    border: 1px solid rgba(255,255,255,0.3);
+}
+.login-box h2, .register h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.login-box input  ,.register input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #e2a34a;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.register-row  {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.login-box .not  {
+  text-decoration: underline;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.login-box .not:hover {
+  color: rgb(123, 224, 255);
+}
+
+.login-box label ,.register label {
+    font-size: 14px;
+  color: #e2a34a;
+}
+.login-row  {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.register .log  {
+  text-decoration: underline;
+  color: #ffffff;
+  cursor: pointer;
+}
+.register .log:hover {
+  color: rgb(123, 224, 255);
+}
