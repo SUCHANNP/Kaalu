@@ -124,6 +124,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_item'])) {
     </div>
     
     <script>
+        //do fast validation before submitting form
+        document.getElementById('itemForm').addEventListener('submit', function(e) {
+            const name = this.item_name.value.trim();
+            const category = this.category.value;
+            const price = parseFloat(this.price.value);
+            const photo = this.photo.value;
+
+            if (!name || !category || isNaN(price) || price <= 0 || !photo) {
+                e.preventDefault();
+                alert('Please fill all fields correctly and select a photo.');
+            }
+        });
         // Image preview functionality
         document.getElementById('photoInput').addEventListener('change', function(e) {
             const preview = document.getElementById('imagePreview');
