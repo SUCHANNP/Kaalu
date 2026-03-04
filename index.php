@@ -167,6 +167,15 @@ session_start();
                 </ul>
             </div>
             <div>
+                <div class="footer-section">
+                    <h3>Let Us Help You</h3>
+                    <ul>
+                        <li>Your Account</li>
+                        <li>Your Orders</li>
+                        <li>Shipping Rates</li>
+                        <li>Help Center</li>
+                    </ul>
+                </div>
                 <h3>Let Us Help You</h3>
                 <ul>
                     <li>Your Account</li>

@@ -64,6 +64,37 @@ if (session_status() === PHP_SESSION_NONE) session_start();
             <?php 
                 endif; 
             endif; 
+            <style>
+                .header-icons button, .header-icons a {
+                    transition: all 0.3s ease;
+                }
+                .cart-btn:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                }
+                .profile-btn:hover {
+                    background-color: #ff9900;
+                    color: white;
+                }
+                .seller-btn:hover {
+                    background-color: #ff9900;
+                    transform: translateY(-2px);
+                }
+                .buyer:hover, .seller:hover {
+                    opacity: 0.9;
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+                }
+                .buyer-btn:hover {
+                    background-color: #ff7700;
+                    transform: scale(1.02);
+                }
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                .header-icons { animation: fadeIn 0.5s ease; }
+            </style>
             ?>
         </div>
     </div>
